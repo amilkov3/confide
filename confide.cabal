@@ -26,30 +26,15 @@ library
   hs-source-dirs:
       src
   exposed-modules:
-      Data.Config
       Data.Config.Generic
   other-modules:
-      Data.Config.Internal.AST
-      Data.Config.Internal.DkM
-      Data.Config.Internal.Parser
-      Data.Config.Internal.Pos
-      Data.Config.Internal.Reg
-      Data.Config.Internal.Register
-      Data.Config.Internal.Rename
-      Data.Config.Internal.Scoped
-      Data.Config.Internal.Typecheck
-      Data.Config.Internal.Typed
       Main
       Paths_confide
   build-depends:
       base >=4.7 && <5
-    , array
-    , mtl
-    , parsec
-    , text
-    , transformers
-    , containers
+    , deiko-config
     , exceptions
+    , text
   default-language: Haskell2010
 
 executable confide-exe
@@ -60,21 +45,8 @@ executable confide-exe
   build-depends:
       base
     , confide
-    , tasty
-    , tasty-hunit
   other-modules:
-      Data.Config
       Data.Config.Generic
-      Data.Config.Internal.AST
-      Data.Config.Internal.DkM
-      Data.Config.Internal.Parser
-      Data.Config.Internal.Pos
-      Data.Config.Internal.Reg
-      Data.Config.Internal.Register
-      Data.Config.Internal.Rename
-      Data.Config.Internal.Scoped
-      Data.Config.Internal.Typecheck
-      Data.Config.Internal.Typed
   default-language: Haskell2010
 
 test-suite confide-test
@@ -85,9 +57,9 @@ test-suite confide-test
   build-depends:
       base
     , confide
+    , deiko-config
     , tasty
     , tasty-hunit
     , text
-  other-modules:
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   default-language: Haskell2010

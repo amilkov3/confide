@@ -11,17 +11,17 @@ extra-source-files:
 library:
   source-dirs: src
   exposed-modules:
-  - Data.Config
   - Data.Config.Generic
   dependencies:
   - base >=4.7 && <5
-  - array
-  - mtl
-  - parsec
-  - text
-  - transformers
-  - containers
+  #- array
+  #- mtl
+  #- parsec
+  #- transformers
+  #- containers
+  - deiko-config
   - exceptions
+  - text
 executables:
   confide-exe:
     main: Main.hs
@@ -44,6 +44,7 @@ tests:
     dependencies:
     - base
     - confide
+    - deiko-config
     - tasty
     - tasty-hunit
     - text

@@ -27,8 +27,8 @@ instance FromConf Baz
 myBaz = Baz "hello" (Bar True (Foo 5))
 
 unitTests = testGroup "Unit tests"
-  [ testCase "Load in type from conf" $ unsafePerformIO (do
+  [ testCase "Load in type from conf" $ do
       c <- loadConfig "test/test.conf"
       baz <- get @Baz "" c
-      return $ assertEqual "test" baz myBaz)
+      assertEqual "test" baz myBaz
   ]
