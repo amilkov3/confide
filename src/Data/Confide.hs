@@ -6,6 +6,5 @@ import Data.Text
 import Control.Monad.Catch
 import Control.Monad.IO.Class
 
-
-loadConfig :: (MonadIO m, MonadThrow m) => Text -> m Config
+loadConfig :: (MonadIO m, MonadThrow m) => String -> m C.Config
 loadConfig = C.loadConfig
