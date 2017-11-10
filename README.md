@@ -24,8 +24,8 @@ b {
 
 module Test where
 
-import Data.Config
-import Data.Config.Generic
+import Data.Confide
+import Data.Confide.Generic
 
 data Foo = Foo {x :: Integer} deriving (Generic, Show)
 data Bar = Bar {y :: Bool, z :: Foo} deriving (Generic, Show)

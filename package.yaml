@@ -11,14 +11,10 @@ extra-source-files:
 library:
   source-dirs: src
   exposed-modules:
-  - Data.Config.Generic
+  - Data.Confide
+  - Data.Confide.Generic
   dependencies:
   - base >=4.7 && <5
-  #- array
-  #- mtl
-  #- parsec
-  #- transformers
-  #- containers
   - deiko-config
   - exceptions
   - text

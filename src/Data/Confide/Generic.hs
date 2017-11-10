@@ -11,7 +11,7 @@
 {-# LANGUAGE UndecidableInstances #-}
 
 
-module Data.Config.Generic( FromConf(..) ) where
+module Data.Confide.Generic( FromConf(..) ) where
 
 import qualified Data.Text as T
 import GHC.Generics
