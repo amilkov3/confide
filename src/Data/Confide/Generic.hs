@@ -1,15 +1,4 @@
-{-# LANGUAGE DeriveGeneric #-}
-{-# LANGUAGE DefaultSignatures #-}
-{-# LANGUAGE FlexibleInstances #-}
-{-# LANGUAGE FlexibleContexts #-}
-{-# LANGUAGE MultiParamTypeClasses #-}
-{-# LANGUAGE OverloadedStrings #-}
-{-# LANGUAGE PolyKinds #-}
-{-# LANGUAGE ScopedTypeVariables #-}
-{-# LANGUAGE TypeApplications #-}
-{-# LANGUAGE TypeOperators #-}
 {-# LANGUAGE UndecidableInstances #-}
-
 
 module Data.Confide.Generic( FromConf(..) ) where
 
@@ -21,8 +10,10 @@ import System.IO.Unsafe
 import Control.Monad.Catch (MonadThrow)
 
 class FromConf a where
+  -- | Decode an `a` from a `Config` given a `Text` path to its HOCON .conf object
   get :: MonadThrow m => T.Text -> Config -> m a
 
+  -- | By default, convert to an `a` from its generic repr
   default get :: (Generic a, GFromConf (Rep a), MonadThrow m) => T.Text -> Config -> m a
   get p c = fmap to (gget p c)
 

@@ -1,11 +1,23 @@
 name: confide
 version: '0.1.0.0'
-category: Web
-author: Author name here
-maintainer: example@example.com
-copyright: 2017 Author name here
+category: Data
+synopsis: derive typeclass instances for decoding types from HOCON conf
+author: Alex Milkov
+maintainer: amilkov3@gmail.com
+copyright: 2018 Alex Milkov
 license: BSD3
-github: githubuser/confide
+github: amilkov3/confide
+homepage: https://github.com/amilkov3/confide
+default-extensions:
+- DefaultSignatures
+- DeriveGeneric
+- FlexibleInstances
+- FlexibleContexts
+- MultiParamTypeClasses
+- OverloadedStrings
+- PolyKinds
+- ScopedTypeVariables
+- TypeOperators
 extra-source-files:
 - README.md
 library:
@@ -15,9 +27,9 @@ library:
   - Data.Confide.Generic
   dependencies:
   - base >=4.7 && <5
-  - deiko-config
-  - exceptions
-  - text
+  - deiko-config >= 0.5.0.1
+  - exceptions == 0.8.3
+  - text == 1.2.2.2
 tests:
   confide-test:
     main: Test.hs

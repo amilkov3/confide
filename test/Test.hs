@@ -5,8 +5,8 @@
 
 import Test.Tasty
 import Test.Tasty.HUnit
-import Data.Config.Generic
-import Data.Config
+import Data.Confide.Generic
+import Data.Confide
 import System.IO.Unsafe
 import GHC.Generics
 import Data.Text as T

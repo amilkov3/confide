@@ -26,6 +26,7 @@ module Test where
 
 import Data.Confide
 import Data.Confide.Generic
+import qualified Data.Text as T
 
 data Foo = Foo {x :: Integer} deriving (Generic, Show)
 data Bar = Bar {y :: Bool, z :: Foo} deriving (Generic, Show)
