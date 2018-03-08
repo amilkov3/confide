@@ -1,5 +1,5 @@
 name: confide
-version: '0.1.0.0'
+version: '0.1.0.2'
 category: Data
 synopsis: derive typeclass instances for decoding types from HOCON conf
 author: Alex Milkov

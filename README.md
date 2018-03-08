@@ -1,6 +1,9 @@
 # confide
 
-[Confide](https://github.com/estatico/confide) port to Haskell (using `GHC.Generics` as opposed to Shapeless to generate 
+[![Build status](https://img.shields.io/travis/amilkov3/confide/master.svg)](https://travis-ci.org/amilkov3/confide)
+[![Hackage status](https://img.shields.io/hackage/v/confide.svg)
+
+[Confide](https://github.com/estatico/confide) port to Haskell (using `GHC.Generics` as opposed to Shapeless to generate
 [FromConf](https://github.com/estatico/confide/blob/master/core/src/main/scala/io/estatico/confide/FromConf.scala) typeclass instances). Uses [deiko-config](https://hackage.haskell.org/package/deiko-config) to parse HOCON .conf file and read in types
 
 ## Usage
@@ -47,6 +50,6 @@ main = do
 GHCI
 
 ```
-$ main 
+$ main
 Baz {a = "hello", b = Bar {y = True, z = Foo {x = 5}}}
 ```

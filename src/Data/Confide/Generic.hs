@@ -1,5 +1,7 @@
 {-# LANGUAGE UndecidableInstances #-}
+{-# LANGUAGE PartialTypeSignatures #-}
 
+{-# OPTIONS_GHC -w #-}
 module Data.Confide.Generic( FromConf(..) ) where
 
 import qualified Data.Text as T
@@ -45,7 +47,7 @@ instance GFromConf a => GFromConf (M1 C x a) where
   gget p c = fmap M1 (gget p c)
 
 instance (GFromConf a, Selector s) => GFromConf (M1 S s a) where
-  gget p c = fmap M1 (gget (p' `T.append` T.pack (selName (undefined :: M1 S s a ()))) c)
+  gget p c = fmap M1 (gget (p' `T.append` T.pack (selName (undefined :: M1 S s a _))) c)
              where p' = if T.null p then p else p `T.append` "."
 
 instance (FromConf a) => GFromConf (K1 R a) where

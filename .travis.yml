@@ -9,7 +9,7 @@ before_install:
  - export PATH=/opt/ghc/8.0.2/bin:$PATH
 
 script:
- - stack --no-terminal --skip-ghc-check test
+ - stack --no-terminal --skip-ghc-check --haddock test
 
 cache:
  directories:
