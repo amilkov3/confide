@@ -1,6 +1,6 @@
 sudo: false
 
-language: haskell
+language: generic
 
 matrix:
   include:
