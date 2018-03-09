@@ -28,8 +28,8 @@ library:
   dependencies:
   - base >=4.7 && <5
   - deiko-config >= 0.5.0.1
-  - exceptions == 0.8.3
-  - text == 1.2.2.2
+  - exceptions
+  - text
 tests:
   confide-test:
     main: Test.hs
